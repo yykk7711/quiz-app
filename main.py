@@ -12,7 +12,14 @@ class Application(tk.Frame):
     def menu(self):
         pass
     def other(self):
-        pass
+        self.title = tk.Button(self)
+        self.title["text"] = "Math Quiz"
+        self.title.pack(side="top")
+
+        self.credit = tk.Button(self)
+        self.credit["text"] = "credit by William & Alan"
+        self.credit.pack(side="bottom")
+
 root = tk.Tk()
 app = Application(master=root)
 
