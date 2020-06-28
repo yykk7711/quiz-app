@@ -5,14 +5,23 @@ class Application(tk.Frame):
         super().__init__(master)
         self.pack()
         self.main()
-        self.command()
+        self.menu()
         self.other()
     def main(self):
         pass
-    def command(self):
+    def menu(self):
         pass
     def other(self):
         pass
 root = tk.Tk()
 app = Application(master=root)
+
+root.geometry("500x500")
+#Menubar
+menubar = tk.Menu(root)
+filemenu = tk.Menu(menubar, tearoff = 0)
+filemenu.add_command(label = "Exit", command = root.quit)
+menubar.add_cascade(label = "File", menu = filemenu)
+
 app.mainloop()
+
