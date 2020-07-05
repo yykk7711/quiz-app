@@ -5,13 +5,16 @@ class Application(tk.Frame):
     def __init__(self, master=None):
         super().__init__(master)
         self.pack()
-        self.main()
         self.menu()
         self.other()
+        self.main()
+
     def main(self):
+
         # Button
-        def getstart():
-            print("Here we go")
+        def getstart(button):
+            print("hi")
+            button.forget_grid()
 
         frame1 = Frame(root)
         frame2 = Frame(root)
@@ -20,11 +23,21 @@ class Application(tk.Frame):
         label = Label(frame1, text="Click to get started", justify=LEFT)
         label.pack(side=LEFT)
 
-        start = Button(frame2, text="Here we go ~", command=getstart)
+        start = Button(frame2, text="Here we go ~")
+        start.command = getstart(start)
         start.pack()
 
         frame1.pack(padx=1, pady=1)
         frame2.pack(padx=1, pady=100)
+
+    def plus(self):
+        pass
+    def minus(self):
+        pass
+    def multiple(self):
+        pass
+    def division(self):
+        pass
     def menu(self):
         # Menubar
         menubar = tk.Menu(self.master)
