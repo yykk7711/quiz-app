@@ -10,8 +10,14 @@ class Application(tk.Frame):
         self.other()
     def main(self):
         # Button
-        def getstart():
-            print("Here we go")
+        def sum():
+            print("sum")
+        def substraction():
+            print("substract")
+        def multiplication():
+            print("multiply")
+        def division():
+            print("divide")
 
         frame1 = Frame(root)
         frame2 = Frame(root)
@@ -20,11 +26,18 @@ class Application(tk.Frame):
         label = Label(frame1, text="Click to get started", justify=LEFT)
         label.pack(side=LEFT)
 
-        start = Button(frame2, text="Here we go ~", command=getstart)
-        start.pack()
+        start1 = Button(frame2, text="+", command=sum, height=10, width=17)
+        start1.pack()
+        start2 = Button(frame2, text="-", command=substraction, height=10, widt=17)
+        start2.pack()
+        start3 = Button(frame2, text="x", command=multiplication, height=10, width=17)
+        start3.pack()
+        start4 = Button(frame2, text="/", command=division, height=10, width=17)
+        start4.pack()
 
         frame1.pack(padx=1, pady=1)
-        frame2.pack(padx=1, pady=100)
+        frame2.pack(padx=1, pady=1)
+
     def menu(self):
         # Menubar
         menubar = tk.Menu(self.master)
