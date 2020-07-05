@@ -1,5 +1,5 @@
 import tkinter as tk
-
+from tkinter import *
 
 class Application(tk.Frame):
     def __init__(self, master=None):
@@ -34,17 +34,28 @@ class Application(tk.Frame):
         self.credit["text"] = "credit by William & Alan"
         self.credit.pack(side="bottom")
         self.credit.config(font=("credit by William & Alan", 12))
-<<<<<<< HEAD
 
-
-=======
     def exit(self):
         exit()
->>>>>>> 2cb7102a8c0c82f66569c6eea58f6b18e0810d71
+
 root = tk.Tk()
 app = Application(master=root)
 root.title("Math QUIZ")
 root.geometry("500x500")
+def getstart():
+    print("Here we go")
+frame1 = Frame(root)
+frame2 = Frame(root)
+root.title("tkinter frame")
+
+label= Label(frame1,text="Click to get started",justify=LEFT)
+label.pack(side=LEFT)
+
+hi_there = Button(frame2,text="Here we go ~",command=getstart)
+hi_there.pack()
+
+frame1.pack(padx=1,pady=1)
+frame2.pack(padx=1,pady=100)
 
 
 app.mainloop()
