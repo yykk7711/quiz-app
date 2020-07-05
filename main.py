@@ -12,9 +12,20 @@ class Application(tk.Frame):
     def main(self):
 
         # Button
+<<<<<<< HEAD
         def getstart(button):
             print("hi")
             button.forget_grid()
+=======
+        def sum():
+            print("sum")
+        def substraction():
+            print("substract")
+        def multiplication():
+            print("multiply")
+        def division():
+            print("divide")
+>>>>>>> 1470761fe7fe34a1dd02bd8a89e2ee3525302175
 
         frame1 = Frame(root)
         frame2 = Frame(root)
@@ -23,6 +34,7 @@ class Application(tk.Frame):
         label = Label(frame1, text="Click to get started", justify=LEFT)
         label.pack(side=LEFT)
 
+<<<<<<< HEAD
         start = Button(frame2, text="Here we go ~")
         start.command = getstart(start)
         start.pack()
@@ -38,6 +50,20 @@ class Application(tk.Frame):
         pass
     def division(self):
         pass
+=======
+        start1 = Button(frame2, text="+", command=sum, height=10, width=17)
+        start1.pack()
+        start2 = Button(frame2, text="-", command=substraction, height=10, widt=17)
+        start2.pack()
+        start3 = Button(frame2, text="x", command=multiplication, height=10, width=17)
+        start3.pack()
+        start4 = Button(frame2, text="/", command=division, height=10, width=17)
+        start4.pack()
+
+        frame1.pack(padx=1, pady=1)
+        frame2.pack(padx=1, pady=1)
+
+>>>>>>> 1470761fe7fe34a1dd02bd8a89e2ee3525302175
     def menu(self):
         # Menubar
         menubar = tk.Menu(self.master)
