@@ -34,13 +34,10 @@ class Application(tk.Frame):
         self.credit["text"] = "credit by William & Alan"
         self.credit.pack(side="bottom")
         self.credit.config(font=("credit by William & Alan", 12))
-<<<<<<< HEAD
 
-
-=======
     def exit(self):
         exit()
->>>>>>> 2cb7102a8c0c82f66569c6eea58f6b18e0810d71
+
 root = tk.Tk()
 app = Application(master=root)
 root.title("Math QUIZ")
