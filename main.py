@@ -34,7 +34,7 @@ class Application(tk.Frame):
         filemenu.add_command(label="Exit", command=self.exit)
         #creating help menu
         helpmenu = tk.Menu(menubar)
-        helpmenu.add_command(label="Help")
+        helpmenu.add_command(label="Help", command=self.help)
 
         menubar.add_cascade(label="File", menu=filemenu)
         menubar.add_cascade(label="Help", menu=helpmenu)
@@ -48,7 +48,8 @@ class Application(tk.Frame):
         self.credit["text"] = "credit by William & Alan"
         self.credit.pack(side="bottom")
         self.credit.config(font=("credit by William & Alan", 12))
-
+    def help(self):
+        print("TEST")
     def exit(self):
         exit()
 
