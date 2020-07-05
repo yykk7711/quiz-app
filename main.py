@@ -9,6 +9,7 @@ class Application(tk.Frame):
         self.menu()
         self.other()
     def main(self):
+        # Button
         def getstart():
             print("Here we go")
 
@@ -19,8 +20,8 @@ class Application(tk.Frame):
         label = Label(frame1, text="Click to get started", justify=LEFT)
         label.pack(side=LEFT)
 
-        hi_there = Button(frame2, text="Here we go ~", command=getstart)
-        hi_there.pack()
+        start = Button(frame2, text="Here we go ~", command=getstart)
+        start.pack()
 
         frame1.pack(padx=1, pady=1)
         frame2.pack(padx=1, pady=100)
