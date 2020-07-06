@@ -127,7 +127,6 @@ class Application(tk.Frame):
                 print("Congratulation! All correct! ")
             else:
                 print("You got " + str(score) + " right!")
->>>>>>> 9d7e75c368818b5c9471a26cadcbf1c311f836b2
 
         frame1 = Frame(root)
         frame2 = Frame(root)
