@@ -1,5 +1,6 @@
 import tkinter as tk
 from tkinter import *
+import random
 
 class Application(tk.Frame):
     def __init__(self, master=None):
@@ -11,13 +12,119 @@ class Application(tk.Frame):
     def main(self):
         # Button
         def sum():
-            print("sum")
+            questions = {}
+            score = 0
+
+            for i in range(10):
+                int_1 = random.randint(1,50)
+                int_2 = random.randint(1,50)
+                operator = "+"
+                question = str(int_1)+" "+str(operator)+" "+str(int_2)
+                answer = eval(question)
+                question+= " = "
+
+                questions.update({question:str(answer)})
+
+            for q in questions.keys():
+                user_answer = input(q)
+                if questions.get(q) == str(user_answer):
+                    score+=1
+                    print("Correct!")
+                else:
+                    print("Incorrect!")
+
+            if score < 5:
+               print("Keep practicing! You only got "+str(score)+" right!")
+            elif score == 10:
+               print("Congratulation! All correct! ")
+            else:
+               print("You got "+str(score)+" right!")
+
         def substraction():
-            print("substract")
+            questions = {}
+            score = 0
+
+            for i in range(10):
+                int_1 = random.randint(1, 50)
+                int_2 = random.randint(1, 50)
+                operator = "-"
+                question = str(int_1) + " " + str(operator) + " " + str(int_2)
+                answer = eval(question)
+                question += " = "
+
+                questions.update({question: str(answer)})
+
+            for q in questions.keys():
+                user_answer = input(q)
+                if questions.get(q) == str(user_answer):
+                    score += 1
+                    print("Correct!")
+                else:
+                    print("Incorrect!")
+
+            if score < 5:
+                print("Keep practicing! You only got " + str(score) + " right!")
+            elif score == 10:
+                print("Congratulation! All correct! ")
+            else:
+                print("You got " + str(score) + " right!")
         def multiplication():
-            print("multiply")
+            questions = {}
+            score = 0
+
+            for i in range(10):
+                int_1 = random.randint(1, 50)
+                int_2 = random.randint(1, 10)
+                operator = "*"
+                question = str(int_1) + " " + str(operator) + " " + str(int_2)
+                answer = eval(question)
+                question += " = "
+
+                questions.update({question: str(answer)})
+
+            for q in questions.keys():
+                user_answer = input(q)
+                if questions.get(q) == str(user_answer):
+                    score += 1
+                    print("Correct!")
+                else:
+                    print("Incorrect!")
+
+            if score < 5:
+                print("Keep practicing! You only got " + str(score) + " right!")
+            elif score == 10:
+                print("Congratulation! All correct! ")
+            else:
+                print("You got " + str(score) + " right!")
         def division():
-            print("divide")
+            print("Remainder: All the answer should be rounded down.")
+            questions = {}
+            score = 0
+
+            for i in range(10):
+                int_1 = random.randint(25, 100)
+                int_2 = random.randint(1, 10)
+                operator = "//"
+                question = str(int_1) + " " + str(operator) + " " + str(int_2)
+                answer = eval(question)
+                question += " = "
+
+                questions.update({question: str(answer)})
+
+            for q in questions.keys():
+                user_answer = input(q)
+                if questions.get(q) == str(user_answer):
+                    score += 1
+                    print("Correct!")
+                else:
+                    print("Incorrect!")
+
+            if score < 5:
+                print("Keep practicing! You only got " + str(score) + " right!")
+            elif score == 10:
+                print("Congratulation! All correct! ")
+            else:
+                print("You got " + str(score) + " right!")
 
         frame1 = Frame(root)
         frame2 = Frame(root)
@@ -69,7 +176,7 @@ class Application(tk.Frame):
 root = tk.Tk()
 app = Application(master=root)
 root.title("Math QUIZ")
-root.geometry("500x500")
+root.geometry("500x1000")
 
 app.mainloop()
 
