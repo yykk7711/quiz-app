@@ -136,13 +136,13 @@ class Application(tk.Frame):
         label.pack(side=LEFT)
 
         start1 = Button(frame2, text="+", command=sum, height=10, width=17)
-        start1.pack()
+        start1.grid(row = 1, column = 1)
         start2 = Button(frame2, text="-", command=substraction, height=10, widt=17)
-        start2.pack()
+        start2.grid(row = 1, column = 2)
         start3 = Button(frame2, text="x", command=multiplication, height=10, width=17)
-        start3.pack()
+        start3.grid(row = 2, column = 1)
         start4 = Button(frame2, text="/", command=division, height=10, width=17)
-        start4.pack()
+        start4.grid(row = 2, column = 2)
 
         frame1.pack(padx=1, pady=1)
         frame2.pack(padx=1, pady=1)
@@ -179,9 +179,9 @@ class Application(tk.Frame):
 root = tk.Tk()
 app = Application(master=root)
 root.title("Math QUIZ")
-root.geometry("500x1000")
+root.geometry("500x500")
 
-app.mainloop()
+root.mainloop()
 
 
 
